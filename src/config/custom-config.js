@@ -49,7 +49,7 @@ module.exports = {
     onlyCategories: [
       'legal',
       'page-data',
-      'page-content',
+      // 'page-content',
       'carbon-for-ibm-dotcom',
     ],
   },
