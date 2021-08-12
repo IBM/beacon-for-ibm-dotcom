@@ -6,12 +6,14 @@
  */
 'use strict';
 
+const path = require('path');
+
 /**
  * @constant Set paths for audits and gatherers.
  * @ignore
  */
-const AUDIT_PATH = '../audits';
-const GATHERER_PATH = '../gatherers';
+const AUDIT_PATH = path.join(__dirname, '../audits');
+const GATHERER_PATH = path.join(__dirname, '../gatherers');
 
 const paths = {
   audit: AUDIT_PATH,
