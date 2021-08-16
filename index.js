@@ -18,6 +18,7 @@ module.exports = (args) => {
  * Runs Lighthouse on the given URL and outputs the results in the given format.
  *
  * @param {object} args Command line options
+ * @returns {string} Raw output as a string if --raw is passed, otherwise outputs to stdout.
  */
 async function runLightHouse(args) {
   const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless'] });
@@ -29,8 +30,16 @@ async function runLightHouse(args) {
   const runnerResult = await lighthouse(args.url, options, config);
 
   // `.report` is the outputted report.
-  const reportHtml = await runnerResult.report;
-  fs.writeFileSync(`beacon.report.${options.output}`, reportHtml);
+  const report = await runnerResult.report;
+
+  if (args.raw) {
+    await chrome.kill();
+    console.log('report', report);
+
+    return await report;
+  } else {
+    fs.writeFileSync(`beacon.report.${options.output}`, report);
+  }
 
   // `.lhr` is the Lighthouse Result as a JS object
   console.log('Report is done for', runnerResult.lhr.finalUrl);
