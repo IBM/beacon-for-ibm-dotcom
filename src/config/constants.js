@@ -7,7 +7,6 @@
 'use strict';
 
 const path = require('path');
-const appDir = path.dirname(require.main.filename);
 
 /**
  * @constant Set global paths.
@@ -16,12 +15,12 @@ const appDir = path.dirname(require.main.filename);
 const AUDIT_PATH = path.join(__dirname, '../audits');
 const GATHERER_PATH = path.join(__dirname, '../gatherers');
 const I18N_PATH = path.join(
-  appDir,
-  'node_modules/lighthouse/lighthouse-core/lib/i18n/i18n.js'
+  __dirname,
+  '../../../lighthouse/lighthouse-core/lib/i18n/i18n.js'
 );
 const PAGE_FUNCTIONS = path.join(
-  appDir,
-  'node_modules/lighthouse/lighthouse-core/lib/page-functions.js'
+  __dirname,
+  '../../../lighthouse/lighthouse-core/lib/page-functions.js'
 );
 
 const paths = {

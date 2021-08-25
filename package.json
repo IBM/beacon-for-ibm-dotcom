@@ -12,7 +12,7 @@
     "beacon-for-ibm-dotcom": "./cli.js"
   },
   "scripts": {
-    "beacon": "lighthouse --config-path=src/config/custom-config.js",
+    "beacon-for-ibm-dotcom": "lighthouse --config-path=src/config/custom-config.js",
     "ci-check": "npm run format:diff && yarn lint:src",
     "format": "prettier --write '**/*.{js,md}'",
     "format:diff": "prettier --list-different '**/*.{js,md}'",
