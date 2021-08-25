@@ -1,7 +1,7 @@
 {
   "name": "beacon-for-ibm-dotcom",
   "description": "Beacon for IBM.com",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "repository": "https://github.com/IBM/beacon-for-ibm-dotcom",
   "license": "Apache-2.0",
   "engines": {
