@@ -9,9 +9,10 @@ const chromeLauncher = require('chrome-launcher');
  * @param {string} args.url URL to run Lighthouse on
  * @param {string} args.output Output format. Supports HTML, JSON, and csv. Default is HTML.
  * @example beacon-for-ibm-dotcom --url "https://example.com" --output json
+ * @returns {*} Raw output as a string if --raw is passed, otherwise outputs to stdout.
  */
 module.exports = (args) => {
-  runLightHouse(args);
+  return Promise.resolve(runLightHouse(args));
 };
 
 /**
@@ -21,28 +22,31 @@ module.exports = (args) => {
  * @returns {string} Raw output as a string if --raw is passed, otherwise outputs to stdout.
  */
 async function runLightHouse(args) {
-  const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless'] });
-  const options = {
-    logLevel: 'info',
-    output: args.output ? args.output : 'html',
-    port: chrome.port,
-  };
-  const runnerResult = await lighthouse(args.url, options, config);
+  try {
+    const chrome = await chromeLauncher.launch({
+      chromeFlags: ['--headless', '--disable-dev-shm-usage'],
+    });
+    const options = {
+      logLevel: 'info',
+      output: args.output ? args.output : 'html',
+      port: chrome.port,
+    };
+    const runnerResult = await lighthouse(args.url, options, config);
 
-  // `.report` is the outputted report.
-  const report = await runnerResult.report;
+    // `.report` is the outputted report.
+    const report = await runnerResult.report;
 
-  if (args.raw) {
     await chrome.kill();
-    console.log('report', report);
 
-    return await report;
-  } else {
-    fs.writeFileSync(`beacon.report.${options.output}`, report);
+    if (args.raw) {
+      return await report;
+    } else {
+      fs.writeFileSync(`beacon.report.${options.output}`, report);
+    }
+
+    // `.lhr` is the Lighthouse Result as a JS object
+    console.log('Report is done for', runnerResult.lhr.finalUrl);
+  } catch (err) {
+    console.log(err);
   }
-
-  // `.lhr` is the Lighthouse Result as a JS object
-  console.log('Report is done for', runnerResult.lhr.finalUrl);
-
-  await chrome.kill();
 }
