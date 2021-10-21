@@ -11,8 +11,8 @@ const constants = require('../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Carbon Design System Typograhy tokens are not being overwritten.',
-  failureTitle: 'Carbon Design System Typograhy tokens are being overwritten.',
+  title: 'Carbon Design System typography tokens are not being overwritten.',
+  failureTitle: 'Carbon Design System typography tokens are being overwritten.',
   description:
     'Typography token values must adhere to the guidelines specified by the Carbon Design System. [Learn more](https://www.carbondesignsystem.com/guidelines/typography/overview)',
 };
