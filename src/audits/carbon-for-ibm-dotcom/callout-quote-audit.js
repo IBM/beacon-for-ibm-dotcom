@@ -12,9 +12,9 @@ const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
   title:
-    'Carbon for IBM.com Callout quote uses the recommended character count.',
+    'The Carbon for IBM.com Callout quote is using the recommended character count for the quote.',
   failureTitle:
-    'The Carbon for IBM.com Callout quote is not using the recommended character count.',
+    'The Carbon for IBM.com Callout quote component is not using the recommended character count for the quote.',
   description:
     'The Callout quote component has a recommended maximum number of characters for the quote. See the [content guidance](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/callout-quote#content-guidance) for more information.',
 };
