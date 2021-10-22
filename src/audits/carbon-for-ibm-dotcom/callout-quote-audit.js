@@ -11,7 +11,8 @@ const constants = require('../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'The Carbon for IBM.com Callout quote is using the recommended character count for the quote.',
+  title:
+    'The Carbon for IBM.com Callout quote is using the recommended character count for the quote.',
   failureTitle:
     'The Carbon for IBM.com Callout quote component is not using the recommended character count for the quote.',
   description:
