@@ -14,7 +14,7 @@ const UIStrings = {
   title: 'The link to IBM Accessibility is included on the page.',
   failureTitle: 'The link to IBM Accessibility is missing.',
   description:
-    'The link to IBM Accessibility is automatically included as part of the IBM Footer component. You must use the Carbon for IBM.com Footer component to ensure this and all footer links are included on the page. [Learn more](https://www.ibm.com/standards/carbon/components/footer).,
+    'The link to IBM Accessibility is automatically included as part of the IBM Footer component. You must use the Carbon for IBM.com Footer component to ensure this and all footer links are included on the page. [Learn more](https://www.ibm.com/standards/carbon/components/footer).',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
