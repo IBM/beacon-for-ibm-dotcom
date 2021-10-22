@@ -11,7 +11,8 @@ const constants = require('../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'The Carbon for IBM.com Card component is using the recommended character count for the copy.',
+  title:
+    'The Carbon for IBM.com Card component is using the recommended character count for the copy.',
   failureTitle:
     'The Carbon for IBM.com Card component is not using the recommended character count for the copy.',
   description:

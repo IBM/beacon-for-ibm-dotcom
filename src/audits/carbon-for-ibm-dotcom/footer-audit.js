@@ -12,8 +12,7 @@ const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
   title: 'The Carbon for IBM.com Footer component is in use on the page.',
-  failureTitle:
-    'The Carbon for IBM.com Footer component is missing.',
+  failureTitle: 'The Carbon for IBM.com Footer component is missing.',
   description:
     'The Carbon for IBM.com Footer component is required on all pages on IBM.com. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/footer).',
 };

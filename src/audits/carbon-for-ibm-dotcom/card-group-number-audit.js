@@ -11,7 +11,8 @@ const constants = require('../../config/constants');
 const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'The Carbon for IBM.com Card group component is using the recommended number of cards.',
+  title:
+    'The Carbon for IBM.com Card group component is using the recommended number of cards.',
   failureTitle:
     'The Carbon for IBM.com Card group component is not using the recommended number of cards.',
   description:

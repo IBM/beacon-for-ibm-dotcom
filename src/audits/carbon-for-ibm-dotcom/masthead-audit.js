@@ -12,8 +12,7 @@ const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
   title: 'The Carbon for IBM.com Masthead component is in use on the page.',
-  failureTitle:
-    'The Carbon for IBM.com Masthead component is missing.',
+  failureTitle: 'The Carbon for IBM.com Masthead component is missing.',
   description:
     'The Carbon for IBM.com Masthead component is a fundamental navigational component that is required at the top of every IBM.com page. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/masthead).',
 };
