@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "lighthouse": "^8.5.1",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^3.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.8",
